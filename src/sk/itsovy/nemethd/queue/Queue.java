@@ -2,7 +2,6 @@ package sk.itsovy.nemethd.queue;
 
 import sk.itsovy.nemethd.Exception.QueueOverflowException;
 import sk.itsovy.nemethd.Exception.QueueUnderflowException;
-
 import java.util.ArrayList;
 import java.util.List;
 

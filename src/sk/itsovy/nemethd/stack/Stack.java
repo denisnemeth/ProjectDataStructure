@@ -2,7 +2,6 @@ package sk.itsovy.nemethd.stack;
 
 import sk.itsovy.nemethd.Exception.StackOverflowException;
 import sk.itsovy.nemethd.Exception.StackUnderflowException;
-
 import java.util.ArrayList;
 import java.util.List;
 
