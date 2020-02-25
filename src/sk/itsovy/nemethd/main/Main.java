@@ -6,6 +6,8 @@ import sk.itsovy.nemethd.Exception.StackOverflowException;
 import sk.itsovy.nemethd.Exception.StackUnderflowException;
 import sk.itsovy.nemethd.linkedList.LinkedList;
 import sk.itsovy.nemethd.linkedList.Node;
+import sk.itsovy.nemethd.queue.Queue;
+import sk.itsovy.nemethd.stack.Stack;
 
 public class Main {
     public static void main(String[] args) throws StackOverflowException, StackUnderflowException, QueueOverflowException, QueueUnderflowException {
@@ -62,8 +64,10 @@ public class Main {
         linkedListString.addToFront(node2);
         linkedListString.addToFront(node1);
         linkedListString.addToFront(node0);
-        //linkedListString.addToEnd(node4);
-        linkedListString.add(node3, 1);
+        linkedListString.addToEnd(node4);
+        linkedListString.add(node3, 2);
+        linkedListString.print();
+        System.out.println();
         //linkedListString.removeAll();
         linkedListString.remove(node1);
         linkedListString.remove(linkedListString.findByName("Denis5"));
@@ -72,7 +76,5 @@ public class Main {
         System.out.println(linkedListString.findByName("Denis6"));
         System.out.println(node4.getNext());
         System.out.println(linkedListString.getSize());
-
-        LinkedList linkedListInt = new LinkedList();
     }
 }

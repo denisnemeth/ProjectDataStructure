@@ -14,30 +14,25 @@ public class LinkedList {
         }
         head = node;
     }
-    public void addToEnd (Node node) {
-        if (node == null) return;
-        Node temp = head;
-        while (temp.getNext() != null) {
-            temp = temp.getNext();
-            temp.setNext(node);
+    public void addToEnd(Node node) {
+        if (node == null) {
+            return;
         }
-        temp.setNext(null);
+        Node temp = head;
+        while (temp.getNext() != null)
+            temp = temp.getNext();
+        temp.setNext(node);
     }
-    public void add (Node node, int position) {
+    public void add(Node node, int position) {
         if (node == null) return;
-        if (position < 1) {
-            addToFront(node);
-        } else if (position >= getSize()) {
-            addToEnd(node);
+        if (position <= 0) { addToFront(node);
+        } else if (position >= getSize()) { addToEnd(node);
         } else {
             Node temp = head;
-            for (int i = 1; i < position; i++) {
-                temp = temp.getNext();
-                node.setNext(temp.getNext());
-                temp.setNext(node);
-            }
+            for (int i = 1; i < position; i++) temp = temp.getNext();
+            node.setNext(temp.getNext());
+            temp.setNext(node);
         }
-
     }
     public void print () {
         if (head == null) {
@@ -84,5 +79,8 @@ public class LinkedList {
             temp = temp.getNext();
         }
         return count;
+    }
+    public Node getHead() {
+        return head;
     }
 }
